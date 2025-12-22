@@ -1,0 +1,70 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --body-bg: linear-gradient(90deg,rgba(56, 2, 87, 1) 0%, rgba(54, 21, 74, 1) 50%, rgba(71, 16, 97, 1) 100%);
+    --white: #e5e5e5;
+    --social-bg: rgba(255,255,255,0.08);
+    --social-filter: blur(20px);
+    --social-hover-bg: rgba(255,255,255,0.35);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: var(--body-bg);
+}
+
+.freitas::after {
+    content: '';
+    display: block;
+    background: var(--white);
+    height: 2px;
+    width: 15%;
+    position: absolute;
+    bottom: 0;
+    right: -15px;
+    animation: piscar 1500ms ease-in-out infinite;
+}
+
+.box-social span {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(50%);
+}
+
+.social {
+    background: var(--social-bg);
+    backdrop-filter: var(--social-filter);
+}
+
+@keyframes piscar {
+    0%, 100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
+.tooltip {
+    position: absolute;
+    background: #000;
+    color: var(--white);
+    padding: 4px 8px;
+    font-size: 12px;
+    width: 15%;
+    border-radius: 10px;
+    pointer-events: none;
+}
+
+@media (max-width: 768px) {
+    .tooltip {
+       display: none;
+    }
+}
