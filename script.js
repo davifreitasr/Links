@@ -1,4 +1,9 @@
+const profile = document.getElementById('profile')
 const el = document.querySelector('.freitas') // selecionar o freitas
+
+profile.addEventListener('contextmenu', (e) => {
+    e.preventDefault()
+})
 
 el.addEventListener('mouseenter', () => { // quando passar o mouse
     const tip = document.createElement('div') // criar uma div
