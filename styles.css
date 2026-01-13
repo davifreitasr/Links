@@ -27,7 +27,7 @@ body {
     position: absolute;
     bottom: 0;
     right: -15px;
-    animation: piscar 1500ms ease-in-out infinite;
+    animation: blink 1500ms ease-in-out infinite;
 }
 
 .box-social span {
@@ -42,7 +42,7 @@ body {
     backdrop-filter: var(--social-filter);
 }
 
-@keyframes piscar {
+@keyframes blink {
     0%, 100% {
         opacity: 1;
     }
