@@ -4,9 +4,24 @@
 :root {
     --background: #020617;
     --white: #e5e5e5;
+    --scroll-bg: #cccccc;
+    --tooltip-bg: #000000;
     --social-bg: rgba(255,255,255,0.08);
-    --social-filter: blur(20px);
+    --social-txt: rgba(255,255,255,0.6);
     --social-hover-bg: rgba(255,255,255,0.35);
+    --social-filter: blur(20px);
+}
+
+::-webkit-scrollbar {
+    width: .3rem;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--white);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--scroll-bg);
 }
 
 * {
@@ -93,33 +108,34 @@ body {
     animation: blink 1500ms ease-in-out infinite;
 }
 
-.box-social span {
-    position: absolute;
-    top: 50%;
-    right: 0;
-    transform: translateY(50%);
+.title {
+    color: var(--white);
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 1rem;
 }
 
-.social {
+.social, .projects {
     background: var(--social-bg);
+    color: var(--social-txt);
     backdrop-filter: var(--social-filter);
+    padding: 12px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: transform 300ms ease;
+    cursor: pointer;
 }
 
-@keyframes blink {
-    0%, 100% {
-        opacity: 1;
-    }
-
-    50% {
-        opacity: 0;
-    }
+.social:hover, .projects:hover {
+    transform: translateY(-2px);
 }
 
 .tooltip {
     position: absolute;
-    background: #000;
+    background: var(--tooltip-bg);
     color: var(--white);
-    padding: 4px 8px;
+    padding: .5rem;
     font-size: 12px;
     width: 15%;
     border-radius: 10px;
