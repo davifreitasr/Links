@@ -6,7 +6,8 @@
     --white: #e5e5e5;
     --scroll-bg: #cccccc;
     --tooltip-bg: #000000;
-    --social-bg: rgba(255,255,255,0.08);
+    --social-bg: #101828;
+    --social-bg-hover: #1E2939;
     --social-txt: rgba(255,255,255,0.6);
     --social-hover-bg: rgba(255,255,255,0.35);
     --social-filter: blur(20px);
@@ -123,12 +124,13 @@ body {
     font-size: 20px;
     font-weight: bold;
     border-radius: 6px;
-    transition: transform 300ms ease;
+    transition: background 200ms ease, transform 200ms ease;
     cursor: pointer;
 }
 
 .social:hover, .projects:hover {
-    transform: translateY(-2px);
+    background-color: var(--social-bg-hover);
+    transform: scale(1.02);
 }
 
 .tooltip {
