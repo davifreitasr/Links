@@ -3,28 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Tailwind -->
     <link href="./output.css" rel="stylesheet">
-
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css" integrity="sha512-9xKTRVabjVeZmc+GUW8GgSmcREDunMM+Dt/GrzchfN8tkwHizc5RP4Ok/MXFFy5rIjJjzhndFScTceq5e6GvVQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
     <link rel="shortcut icon" href="images/icon.png" type="image/x-icon">
-
-    <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
-
     <title>Links</title>
 </head>
 <body>
     <main>
         <div class="stars"></div>
-        <div class="flex flex-col items-center w-full my-12 gap-8">
+        <div class="flex flex-col items-center w-full my-8 gap-8">
             <div class="flex flex-col justify-center items-center gap-2.5 select-none">
-                <img
-                    src="/my.jpeg"
-                    alt="Profile"
+                <img src="/my.jpeg" alt="Profile"
                     class="w-[30%] md:w-[20%] rounded-[50%]"
                     id="profile" draggable="false">
 
@@ -32,7 +22,7 @@
                 <p class="text-[#8E96A3]">Web Developer <i class="fa-solid fa-laptop"></i></p> 
             </div>
 
-            <div class="flex flex-col justify-center items-center text-center gap-6 w-[80%] text-xl md:w-[30%]">
+            <div class="flex flex-col justify-center items-center text-center gap-6 w-[80%] md:w-[30%] text-xl">
                 <div>
                     <h2 class="title">My Links</h2>
                 </div>
@@ -42,25 +32,11 @@
                     <a data-link="https://github.com/davifreitasr" class="social w-full"><i class="fa-brands fa-github text-neutral-950"></i> GitHub</a>
                 </div>
             </div>
-
-            <div class="flex flex-col gap-4 text-center w-[80%] md:w-[30%] mt-8">
-                <div>
-                    <h2 class="title">Top 5 🔥</h2>
-                </div>
-                <div class="flex flex-col gap-4 w-full">
-                    <a href="https://df-translate.vercel.app" target="_blank" rel="noopener noreferrer"
-                       class="projects">Translate</a>
-                    <a href="#" class="projects">???</a>
-                    <a href="#" class="projects">???</a>
-                    <a href="#" class="projects">???</a>
-                    <a href="#" class="projects">???</a>
-                </div>
-            </div>
         </div>
     </main>
 
     <footer>
-         <div class="flex flex-col justify-center items-center text-center my-4 text-neutral-200 select-none">
+         <div class="flex flex-col justify-center items-center text-center absolute bottom-2 left-0 right-0 my-4 text-neutral-200 select-none">
             <span>&copy; davi freitas 2026</span>
         </div>
     </footer>
